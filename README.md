@@ -32,9 +32,7 @@ As chip manufacturing becomes more advanced, **layout rules** are important to m
 ### Procedure ------->
 ---
 ### Step 1 – Launch Layout XL
-In Virtuoso, go to the **top left corner** and locate the **Launch** option.Click **Launch → Layout XL**. 
-Click **Launch → Layout XL**.  
-A start-up options window will pop up.
+In Virtuoso, go to the **top left corner** and locate the **Launch** option. Click **Launch → Layout XL**. A start-up options window will pop up.
 
 ### Step 2 – Create a New Layout
 In the pop-up window, select **Create New** and click **OK**.
@@ -73,20 +71,13 @@ In **Display Levels**:
 
 ### Step 6 – Generating Layout from Schematic
 Go to **Connectivity → Generate → All from Source**.  
-In the **Generate Layout** window:
+In the **Generate Layout** window: Check **I/O Pins**, Check **PR Boundary**, Check **Extract Connectivity after Generation**, Click **OK**.
 
 
 ![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%205_Generate%20Layout.png)
 
-- Check **I/O Pins**
-- Check **PR Boundary**
-- Check **Extract Connectivity after Generation**  
-Click **OK**.
-
 ### Step 7 – Initial Device Placement
-The layout window now displays the **top view** of MOSFETs from the schematic.  
-The layout is predesigned based on the technology file.  
-Each MOSFET will have its **source**, **drain**, and **gate** marked along with net names.  
+The layout window now displays the **top view** of MOSFETs from the schematic. The layout is predesigned based on the technology file. Each MOSFET will have its **source**, **drain**, and **gate** marked along with net names. 
 For the inverter:
 - PMOS and NMOS layouts will appear
 - Pins: `vdd`, `gnd`, `in`, `out` will be visible.
@@ -96,42 +87,28 @@ For the inverter:
 ### Step 8 – Routing Layout Connections
 To move components: **select layout → press `m`**.  
 To draw connections: **press `Ctrl + Shift + W`** to activate the line tool.  
-Select the appropriate layer (**Metal**, **polySi**, etc.) from **LSW**.  
-Merging the same nets is allowed.  
-Additional shapes can be drawn via **Create → Shape**.
+Select the appropriate layer (**Metal**, **polySi**, etc.) from **LSW**. Merging the same nets is allowed. Additional shapes can be drawn via **Create → Shape**.
 
 ### Step 9 – Adding N-Well for PMOS
-Since PMOS is built on **N-type substrate**, an **N-Well** is required for the `vdd` connection.  
-Select **WN** from LSW.  
-Use rectangle tool (**press `R`** or go to **Create → Shape → Rectangle**) to draw the N-Well region.
+Since PMOS is built on **N-type substrate**, an **N-Well** is required for the `vdd` connection. Select **WN** from LSW. Use rectangle tool (**press `R`** or go to **Create → Shape → Rectangle**) to draw the N-Well region.
 
 ### Step 10 – Adding N-Well and P-Well Taps
-For N-Well tap:
-- Go to **Create → Multipart Path** (press `F3`)
-- In **MPP Template**, select **NWELL Tap** and click **Hide**
-- Click on the N-Well region and drag to create the tap.
+For N-Well tap: Go to **Create → Multipart Path** (press `F3`), In **MPP Template**, select **NWELL Tap** and click **Hide**, Click on the N-Well region and drag to create the tap.
 
 ![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%206_Create%20Multipart%20Path.png)
 
-For P-Well tap (ground connection):
-- Directly select **P-WELL Tap** from Multipart Path
-- Draw on the p-type substrate (black area).
+For P-Well tap (ground connection): Directly select **P-WELL Tap** from Multipart Path, Draw on the p-type substrate (black area).
 
 ### Step 11 – Connecting PMOS and NMOS Gates
 The **polySi** gates (red layer) of PMOS and NMOS must be connected for the inverter input.  
-To add contact vias between polySi and Metal1:
-- Go to **Create → Multipart Path** and press `F3`
-- In **MPP Template**, select **GC_M1** and click **Hide**
-- Draw vias on the polySi gate input.
+To add contact vias between polySi and Metal1: Go to **Create → Multipart Path** and press `F3`, In **MPP Template**, select **GC_M1** and click **Hide**, Draw vias on the polySi gate input.
 
 ### Step 12 – Labelling Ports
-Labels must match schematic port names exactly (`in`, `out`, `vdd`, `gnd`).  
-Press **`L`** to open the label tool.  
-
+Labels must match schematic port names exactly (`in`, `out`, `vdd`, `gnd`). Press **`L`** to open the label tool.
+  
 ![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%207_Create%20Label.png)
 
-Set **Layer** = `M1 Label`.  
-Place the `+` symbol exactly on the **Metal layer** and **save the design**.
+Set **Layer** = `M1 Label`. Place the `+` symbol exactly on the **Metal layer** and **save the design**.
 
 ## Notes
 - Maintain **identical pin names** between schematic and layout for smooth LVS verification.
@@ -149,17 +126,14 @@ Place the `+` symbol exactly on the **Metal layer** and **save the design**.
 ### Running DRC in Calibre
 
 1. **Open the DRC Tool**
-   - In Virtuoso, go to **Calibre → Run nmDRC…**
-   - A new window will pop up.
+   In Virtuoso, go to **Calibre → Run nmDRC…**, A new window will pop up.
 
 2. **Verify File Path**
-   - The tool will prompt for the correct path of the layout file.
-   - Ensure the path is correct, then click **OK**.
-
+   The tool will prompt for the correct path of the layout file. Ensure the path is correct, then click **OK**.
+     
 3. **Start the DRC Process**
-   - Click **Run DRC** or **Start DRC**.
-   - A new pop-up will appear displaying the DRC report.
-
+   Click **Run DRC** or **Start DRC**. A new pop-up will appear displaying the DRC report.
+   
 4. **View and Interpret Results**
    - The report shows details based on the design rule file for the selected technology.
    - If errors are present:
@@ -167,11 +141,7 @@ Place the `+` symbol exactly on the **Metal layer** and **save the design**.
      - **Single-click** the error number → Displays a description of the error.
 
 5. **Error Correction**
-   - If errors are detected:
-     - Go back to the layout.
-     - Fix the highlighted violations.
-     - Save the layout.
-     - Re-run DRC until no errors remain.
+   If errors are detected: Go back to the layout, Fix the highlighted violations, Save the layout, Re-run DRC until no errors remain.
 
 6. **No Errors**
    - If the DRC report shows no errors, proceed to the next verification step such as LVS.
@@ -200,10 +170,7 @@ Save the file and run LVS again.
 
 ![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/fee07ade688a3b4f651c2a82a3818396ece7710e/Fig%2010_Calibre%20Interactive%20-%20nmL%20VS.png)
 
-7. If all ports in the layout and schematic match, the result will show **Correct**. If not, check:
-- Layout port names
-- Label placement
-- The number of ports in both layout and schematic
+7. If all ports in the layout and schematic match, the result will show **Correct**. If not, check: Layout port names, Label placement, The number of ports in both layout and schematic.
 
 ![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/0236462dea1726416b6fd433a7a496c86b92708f/Fig%2011_LVS%20Comparison%20Results.png)
 
