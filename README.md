@@ -16,4 +16,6 @@ Passing both DRC and LVS indicates that the design is rule-compliant, functional
 - **Calibre v2016.1_14.11** – Physical Verification (DRC, LVS)  
 - **GPDK 90 nm** – Process Design Kit (PDK) used for technology-specific parameters and rules  
 
+## Introduction
+CMOS (Complementary Metal–Oxide–Semiconductor) integrates PMOS and NMOS transistors to build efficient, high-performance logic circuits with minimal static power dissipation. Using the 90 nm process node, where the minimum feature size is 90 nanometers, enables compact layouts, faster switching speeds, and lower power consumption. Layout design in VLSI translates a verified circuit schematic into a fabrication-ready physical representation that meets design rules, allowing for accurate verification, parasitic analysis, and eventual chip fabrication for real-world applications.
 
