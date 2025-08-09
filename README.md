@@ -116,4 +116,3 @@ Place the `+` symbol exactly on the **Metal layer**.
 ## Notes
 - Maintain **identical pin names** between schematic and layout for smooth LVS verification.
 - Save your layout regularly to avoid data loss.
-- After completing the layout, run **DRC** and **LVS** to ensure rule compliance and schematic equivalence.
