@@ -52,7 +52,7 @@ Click **OK** to open:
 - A **blank layout window** (black background = p-type substrate)
 - The **schematic window** for reference.
 
-## Adding Components to Layout
+### Adding Components to Layout
 
 ### Step 5 – Adjusting Display Settings
 Before placing components, adjust display settings for better visibility.  
