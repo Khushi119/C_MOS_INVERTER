@@ -111,9 +111,8 @@ To add contact vias between polySi and Metal1:
 Labels must match schematic port names exactly (`in`, `out`, `vdd`, `gnd`).  
 Press **`L`** to open the label tool.  
 Set **Layer** = `M1 Label`.  
-Place the `+` symbol exactly on the **Metal layer**.
+Place the `+` symbol exactly on the **Metal layer** and save the design.
 
 ## Notes
 - Maintain **identical pin names** between schematic and layout for smooth LVS verification.
 - Save your layout regularly to avoid data loss.
-Now save the design.
