@@ -24,6 +24,7 @@ CMOS (Complementary Metal–Oxide–Semiconductor) integrates PMOS and NMOS tran
 Virtuoso Layout Suite XL is a tool used to create custom IC layouts in a clear and organized way. It works together with a circuit’s schematic or netlist to help designers place and connect components correctly. The software can automatically create devices, arrange them, connect the wiring, and allow users to check and highlight parts in both the schematic and layout to find errors quickly.
 
 In this project, a **CMOS inverter** is designed in Cadence Virtuoso, then tested through **Design Rule Check (DRC)** to ensure it follows manufacturing rules, **Layout Versus Schematic (LVS)** to confirm the layout matches the schematic.
+
 ![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/1efdcc1da1aaa88c63bab662d87fb14718f6cfa9/Fig%201_CMOS%20inverter%20schematic%20design.png)
 
 As chip manufacturing becomes more advanced, **layout rules** are important to make sure designs can be built reliably. A correct schematic is essential before creating the layout, since any mistakes in the schematic will also appear in the layout. Consistent pin names between the schematic and layout help avoid mismatches during verification.
@@ -37,6 +38,8 @@ A start-up options window will pop up.
 
 ### Step 2 – Create a New Layout
 In the pop-up window, select **Create New** and click **OK**.
+
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/04ac3accc8da00dcbd3bd78ed0c8f103e160bf17/Fig%202_Startup%20Option.png)
 
 ### Step 3 – File Form Verification
 A **New File** form will appear.  
