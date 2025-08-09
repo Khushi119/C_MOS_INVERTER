@@ -49,6 +49,8 @@ Check:
 - **View name**: Preloaded by default; just verify it.  
 If correct, proceed without changes.
 
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%203_New%20File.png)
+
 ### Step 4 – Opening the Layout Workspace
 Click **OK** to open:
 - **LSW (Layer Select Window)**
@@ -67,9 +69,15 @@ In **Display Levels**:
 - Start = `0`
 - Stop = `10`
 
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%204_Display%20Options.png)
+
 ### Step 6 – Generating Layout from Schematic
 Go to **Connectivity → Generate → All from Source**.  
 In the **Generate Layout** window:
+
+
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%205_Generate%20Layout.png)
+
 - Check **I/O Pins**
 - Check **PR Boundary**
 - Check **Extract Connectivity after Generation**  
@@ -101,7 +109,10 @@ Use rectangle tool (**press `R`** or go to **Create → Shape → Rectangle**) t
 For N-Well tap:
 - Go to **Create → Multipart Path** (press `F3`)
 - In **MPP Template**, select **NWELL Tap** and click **Hide**
-- Click on the N-Well region and drag to create the tap.  
+- Click on the N-Well region and drag to create the tap.
+
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%206_Create%20Multipart%20Path.png)
+
 For P-Well tap (ground connection):
 - Directly select **P-WELL Tap** from Multipart Path
 - Draw on the p-type substrate (black area).
@@ -116,12 +127,17 @@ To add contact vias between polySi and Metal1:
 ### Step 12 – Labelling Ports
 Labels must match schematic port names exactly (`in`, `out`, `vdd`, `gnd`).  
 Press **`L`** to open the label tool.  
+
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%207_Create%20Label.png)
+
 Set **Layer** = `M1 Label`.  
 Place the `+` symbol exactly on the **Metal layer** and **save the design**.
 
 ## Notes
 - Maintain **identical pin names** between schematic and layout for smooth LVS verification.
 - Save your layout regularly to avoid data loss.
+
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/f5fd933363351e6326d2fef1acac0dc554fa5068/Fig%208_CMOS%20inverter%20Layout.png)
 
 
 ### Physical Verification  ------->
