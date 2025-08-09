@@ -1,5 +1,5 @@
 # C_MOS_INVERTER
-### CMOS Layout Design using 90nm Technology
+### CMOS Layout Design using 90nm Technology ------->
 ---
 
 This project involves the complete design and verification of a CMOS layout using the GPDK 90 nm process technology in Cadence Virtuoso.  
