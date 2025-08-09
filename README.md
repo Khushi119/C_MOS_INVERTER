@@ -11,14 +11,12 @@ Physical verification included:
 
 Passing both DRC and LVS indicates that the design is rule-compliant, functionally correct, and ready for fabrication, minimizing the risk of costly errors during manufacturing.
 
----
 ### Tools and Technology ------->
 ---
 - **Cadence Virtuoso 6.1.7-64b** – Schematic and Layout Design  
 - **Calibre v2016.1_14.11** – Physical Verification (DRC, LVS)  
 - **GPDK 90 nm** – Process Design Kit (PDK) used for technology-specific parameters and rules  
 
----
 ### Introduction ------->
 ---
 CMOS (Complementary Metal–Oxide–Semiconductor) integrates PMOS and NMOS transistors to build efficient, high-performance logic circuits with minimal static power dissipation. Using the 90 nm process node, where the minimum feature size is 90 nanometers, enables compact layouts, faster switching speeds, and lower power consumption. Layout design in VLSI translates a verified circuit schematic into a fabrication-ready physical representation that meets design rules, allowing for accurate verification, parasitic analysis, and eventual chip fabrication for real-world applications.
@@ -29,7 +27,6 @@ In this project, a **CMOS inverter** is designed in Cadence Virtuoso, then teste
 
 As chip manufacturing becomes more advanced, **layout rules** are important to make sure designs can be built reliably. A correct schematic is essential before creating the layout, since any mistakes in the schematic will also appear in the layout. Consistent pin names between the schematic and layout help avoid mismatches during verification.
 
----
 ### Procedure ------->
 ---
 ### Step 1 – Launch Layout XL
@@ -122,8 +119,9 @@ Place the `+` symbol exactly on the **Metal layer** and **save the design**.
 - Maintain **identical pin names** between schematic and layout for smooth LVS verification.
 - Save your layout regularly to avoid data loss.
 
+
+### Physical Verification  ------->
 ---
-# Physical Verification  ------->
 ## Design Rule Check (DRC)
 
 **Design Rule Check (DRC)** is performed to ensure that the layout follows the manufacturing design rules defined for the technology. These rules cover aspects like minimum width, spacing, and overlaps of different layers to guarantee that the design can be fabricated reliably.
