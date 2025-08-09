@@ -205,3 +205,4 @@ Save the file and run LVS again.
 - Label placement
 - The number of ports in both layout and schematic
 
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/0236462dea1726416b6fd433a7a496c86b92708f/Fig%2011_LVS%20Comparison%20Results.png)
