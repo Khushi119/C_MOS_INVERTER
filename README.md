@@ -1,4 +1,5 @@
 # C_MOS_INVERTER
+---
 # CMOS Layout Design using 90nm Technology
 
 This project involves the complete design and verification of a CMOS layout using the GPDK 90 nm process technology in Cadence Virtuoso.  
@@ -17,6 +18,7 @@ Passing both DRC and LVS indicates that the design is rule-compliant, functional
 - **Calibre v2016.1_14.11** – Physical Verification (DRC, LVS)  
 - **GPDK 90 nm** – Process Design Kit (PDK) used for technology-specific parameters and rules  
 
+---
 ## Introduction ------->
 CMOS (Complementary Metal–Oxide–Semiconductor) integrates PMOS and NMOS transistors to build efficient, high-performance logic circuits with minimal static power dissipation. Using the 90 nm process node, where the minimum feature size is 90 nanometers, enables compact layouts, faster switching speeds, and lower power consumption. Layout design in VLSI translates a verified circuit schematic into a fabrication-ready physical representation that meets design rules, allowing for accurate verification, parasitic analysis, and eventual chip fabrication for real-world applications.
 
@@ -26,6 +28,7 @@ In this project, a **CMOS inverter** is designed in Cadence Virtuoso, then teste
 
 As chip manufacturing becomes more advanced, **layout rules** are important to make sure designs can be built reliably. A correct schematic is essential before creating the layout, since any mistakes in the schematic will also appear in the layout. Consistent pin names between the schematic and layout help avoid mismatches during verification.
 
+---
 ## Procedure ------->
 ### Step 1 – Launch Layout XL
 In Virtuoso, go to the **top left corner** and locate the **Launch** option.  
@@ -117,6 +120,7 @@ Place the `+` symbol exactly on the **Metal layer** and **save the design**.
 - Maintain **identical pin names** between schematic and layout for smooth LVS verification.
 - Save your layout regularly to avoid data loss.
 
+---
 # Physical Verification  ------->
 ## Design Rule Check (DRC)
 
