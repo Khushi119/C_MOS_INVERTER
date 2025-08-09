@@ -32,7 +32,7 @@ As chip manufacturing becomes more advanced, **layout rules** are important to m
 ### Procedure ------->
 ---
 ### Step 1 – Launch Layout XL
-In Virtuoso, go to the **top left corner** and locate the **Launch** option.  
+In Virtuoso, go to the **top left corner** and locate the **Launch** option.Click **Launch → Layout XL**. 
 Click **Launch → Layout XL**.  
 A start-up options window will pop up.
 
