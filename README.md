@@ -206,3 +206,22 @@ Save the file and run LVS again.
 - The number of ports in both layout and schematic
 
 ![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/0236462dea1726416b6fd433a7a496c86b92708f/Fig%2011_LVS%20Comparison%20Results.png)
+
+### Conclusion ------->
+---
+The project successfully demonstrates the complete process of designing a CMOS inverter layout using 90 nm technology in Cadence Virtuoso, followed by physical verification through DRC and LVS checks in Calibre. Each stage ensures the design is both manufacturable and logically correct, with DRC validating adherence to fabrication rules and LVS confirming schematic–layout equivalence. These steps form a standard VLSI design flow that can be extended to more complex circuits, enabling accurate, fabrication-ready integrated circuit designs.  
+
+## Further Applications
+
+- Development of larger digital logic blocks such as NAND, NOR, XOR gates.  
+- Integration into combinational and sequential circuits like adders, multiplexers, and flip-flops.  
+- Use in low-power digital systems, microprocessors, and memory circuits.  
+- Educational demonstrations for VLSI design and fabrication processes.  
+
+## Possible Improvements
+
+- Optimizing layout for reduced parasitic capacitance and resistance to improve speed.  
+- Implementing automated routing to reduce manual layout effort.  
+- Extending the design to multiple logic gates in a single chip for compact IC development.  
+- Applying design-for-manufacturability (DFM) techniques to improve yield in fabrication.  
+
