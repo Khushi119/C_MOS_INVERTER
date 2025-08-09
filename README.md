@@ -186,14 +186,20 @@ Run DRC every time changes are made in the layout to ensure it follows the requi
 1. In Virtuoso, go to **Calibre → Run nmLVS…**.
 2. A new window will appear. Verify that the correct file path is selected, then click **OK**.
 3. Click **Run LVS** to start the comparison.
-4. After the first run, the LVS result may show as incorrect.  
+4. After the first run, the LVS result may show as incorrect.
+
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/fee07ade688a3b4f651c2a82a3818396ece7710e/Fig%209_LVS%20Comaprison%20Results.png)
+
    - In this first run, the netlist is exported directly from the schematic.
    - Before running LVS for the first time, make sure the option **“Export from the Schematic view”** is checked under **Inputs → Netlist and Layout**.
 5. Return to the LVS window. Under **Inputs → Netlist**, uncheck **“Export from the Schematic”**.
 6. In the Netlist section, near the Spice files of the netlist, click **View**.  
-   Edit the `*.SCALE METER` line to:  
+   Edit the `*.SCALE METER` line to .OPTIONSCALE=1e-06 (Do not miss the dot)
 This tells the LVS tool that all layout dimensions are in microns, ensuring correct scaling during comparison.  
 Save the file and run LVS again.
+
+![DRC Report Screenshot](https://github.com/Khushi119/C_MOS_INVERTER/blob/fee07ade688a3b4f651c2a82a3818396ece7710e/Fig%2010_Calibre%20Interactive%20-%20nmL%20VS.png)
+
 7. If all ports in the layout and schematic match, the result will show **Correct**. If not, check:
 - Layout port names
 - Label placement
