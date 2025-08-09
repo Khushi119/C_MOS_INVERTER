@@ -19,3 +19,9 @@ Passing both DRC and LVS indicates that the design is rule-compliant, functional
 ## Introduction
 CMOS (Complementary Metal–Oxide–Semiconductor) integrates PMOS and NMOS transistors to build efficient, high-performance logic circuits with minimal static power dissipation. Using the 90 nm process node, where the minimum feature size is 90 nanometers, enables compact layouts, faster switching speeds, and lower power consumption. Layout design in VLSI translates a verified circuit schematic into a fabrication-ready physical representation that meets design rules, allowing for accurate verification, parasitic analysis, and eventual chip fabrication for real-world applications.
 
+Virtuoso Layout Suite XL is a tool used to create custom IC layouts in a clear and organized way. It works together with a circuit’s schematic or netlist to help designers place and connect components correctly. The software can automatically create devices, arrange them, connect the wiring, and allow users to check and highlight parts in both the schematic and layout to find errors quickly.
+
+In this project, a **CMOS inverter** is designed in Cadence Virtuoso, then tested through **Design Rule Check (DRC)** to ensure it follows manufacturing rules, **Layout Versus Schematic (LVS)** to confirm the layout matches the schematic.
+
+As chip manufacturing becomes more advanced, **layout rules** are important to make sure designs can be built reliably. A correct schematic is essential before creating the layout, since any mistakes in the schematic will also appear in the layout. Consistent pin names between the schematic and layout help avoid mismatches during verification.
+
