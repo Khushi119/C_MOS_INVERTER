@@ -155,3 +155,25 @@ Place the `+` symbol exactly on the **Metal layer** and **save the design**.
    - If the DRC report shows no errors, proceed to the next verification step such as LVS.
 
 Run DRC every time changes are made in the layout to ensure it follows the required design rules.
+## Layout Versus Schematic (LVS)
+
+**Layout Versus Schematic (LVS)** is used to verify that the physical layout matches the transistors and connections defined in the schematic. It compares both the schematic and layout files to ensure that the circuit is logically correct before fabrication.
+
+### Steps to Run LVS in Calibre
+
+1. In Virtuoso, go to **Calibre → Run nmLVS…**.
+2. A new window will appear. Verify that the correct file path is selected, then click **OK**.
+3. Click **Run LVS** to start the comparison.
+4. After the first run, the LVS result may show as incorrect.  
+   - In this first run, the netlist is exported directly from the schematic.
+   - Before running LVS for the first time, make sure the option **“Export from the Schematic view”** is checked under **Inputs → Netlist and Layout**.
+5. Return to the LVS window. Under **Inputs → Netlist**, uncheck **“Export from the Schematic”**.
+6. In the Netlist section, near the Spice files of the netlist, click **View**.  
+   Edit the `*.SCALE METER` line to:  
+This tells the LVS tool that all layout dimensions are in microns, ensuring correct scaling during comparison.  
+Save the file and run LVS again.
+7. If all ports in the layout and schematic match, the result will show **Correct**. If not, check:
+- Layout port names
+- Label placement
+- The number of ports in both layout and schematic
+
