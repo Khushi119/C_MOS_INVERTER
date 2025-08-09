@@ -24,7 +24,6 @@ Virtuoso Layout Suite XL is a tool used to create custom IC layouts in a clear a
 In this project, a **CMOS inverter** is designed in Cadence Virtuoso, then tested through **Design Rule Check (DRC)** to ensure it follows manufacturing rules, **Layout Versus Schematic (LVS)** to confirm the layout matches the schematic.
 
 As chip manufacturing becomes more advanced, **layout rules** are important to make sure designs can be built reliably. A correct schematic is essential before creating the layout, since any mistakes in the schematic will also appear in the layout. Consistent pin names between the schematic and layout help avoid mismatches during verification.
-# Creating the Layout – CMOS Inverter (Cadence Virtuoso)
 
 Once the **CMOS inverter schematic** is completed and **functionally verified** in the Virtuoso Schematic Editor, the layout creation process can begin.  
 The following section provides a detailed **step-by-step procedure** for creating the layout in **Virtuoso Layout Suite XL**.
