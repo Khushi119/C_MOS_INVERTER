@@ -118,9 +118,8 @@ Place the `+` symbol exactly on the **Metal layer** and **save the design**.
 - Save your layout regularly to avoid data loss.
 
 # Physical Verification
-
-## Design Rule Check (DRC)
 ---
+## Design Rule Check (DRC)
 
 **Design Rule Check (DRC)** is performed to ensure that the layout follows the manufacturing design rules defined for the technology. These rules cover aspects like minimum width, spacing, and overlaps of different layers to guarantee that the design can be fabricated reliably.
 
