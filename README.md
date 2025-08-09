@@ -111,8 +111,44 @@ To add contact vias between polySi and Metal1:
 Labels must match schematic port names exactly (`in`, `out`, `vdd`, `gnd`).  
 Press **`L`** to open the label tool.  
 Set **Layer** = `M1 Label`.  
-Place the `+` symbol exactly on the **Metal layer** and save the design.
+Place the `+` symbol exactly on the **Metal layer** and **save the design**.
 
 ## Notes
 - Maintain **identical pin names** between schematic and layout for smooth LVS verification.
 - Save your layout regularly to avoid data loss.
+
+# Physical Verification – Design Rule Check (DRC)
+
+**Design Rule Check (DRC)** is performed to ensure that the layout follows the manufacturing design rules defined for the technology. These rules cover aspects like minimum width, spacing, and overlaps of different layers to guarantee that the design can be fabricated reliably.
+
+## Running DRC in Calibre
+
+1. **Open the DRC Tool**
+   - In Virtuoso, go to **Calibre → Run nmDRC…**
+   - A new window will pop up.
+
+2. **Verify File Path**
+   - The tool will prompt for the correct path of the layout file.
+   - Ensure the path is correct, then click **OK**.
+
+3. **Start the DRC Process**
+   - Click **Run DRC** or **Start DRC**.
+   - A new pop-up will appear displaying the DRC report.
+
+4. **View and Interpret Results**
+   - The report shows details based on the design rule file for the selected technology.
+   - If errors are present:
+     - **Double-click** the error number → Highlights the exact location of the error in the layout.
+     - **Single-click** the error number → Displays a description of the error.
+
+5. **Error Correction**
+   - If errors are detected:
+     - Go back to the layout.
+     - Fix the highlighted violations.
+     - Save the layout.
+     - Re-run DRC until no errors remain.
+
+6. **No Errors**
+   - If the DRC report shows no errors, proceed to the next verification step such as LVS.
+
+Run DRC every time changes are made in the layout to ensure it follows the required design rules.
